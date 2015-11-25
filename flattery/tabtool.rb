@@ -235,7 +235,7 @@ module Flattery
         def onLButtonDown(flags, x, y, view)
             update_flags(flags, view)
             
-            if @active_edge:
+            if @active_edge
                 if @dragging
                     ray = view.pickray(x,y)
                     width, inset = width_and_inset(ray)
@@ -273,7 +273,7 @@ module Flattery
         
         def onLButtonUp(flags, x, y, view)
             update_flags(flags, view)
-            if @active_edge && @dragging:
+            if @active_edge && @dragging
                 ray = view.pickray(x,y)
                 width, inset = width_and_inset(ray)
                     
@@ -284,7 +284,7 @@ module Flattery
         
         def onLButtonDoubleClick(flags, x, y, view)
             update_flags(flags, view)
-            if @active_edge:
+            if @active_edge
                 auto_tab(@active_edge)
                 reset(view)
             end
